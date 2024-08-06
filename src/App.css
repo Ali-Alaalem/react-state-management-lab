@@ -7,3 +7,8 @@ li {
   list-style: none;
   margin: 10px;
 }
+
+.stat {
+  display: inline;
+  margin-right: 10px;
+}

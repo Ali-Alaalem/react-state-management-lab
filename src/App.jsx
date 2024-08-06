@@ -87,7 +87,8 @@ const App = () => {
       settotalStrength(totalStrength + fighter.strength);
       setagility(agility + fighter.agility);
     } else {
-      setMoney(`You dont have enough money`);
+      setMoney(money);
+      console.log("You dint have enough money");
     }
   };
 
@@ -102,7 +103,6 @@ const App = () => {
 
   return (
     <>
-      <h1>Your money : {money}</h1>
       <>
         <br />
         <ul>
@@ -121,15 +121,16 @@ const App = () => {
         </ul>
         <br />
       </>
+      <h3>Your money : {money}</h3>
+
+      <p className="stat">Total strength : {totalStrength}</p>
+      <p className="stat">Total agility : {agility}</p>
       {team.length === 0 ? (
-        <h2>You do not have a team pick one</h2>
+        <h3>You do not have a team pick one</h3>
       ) : (
-        <h1>Your team is :</h1>
+        <p>Your team is :</p>
       )}
-      <h3>Total strength : {totalStrength}</h3>
-      <h3>Total agility : {agility}</h3>
       <>
-        <br />
         <ul>
           {team.map((player, index) => (
             <li key={index}>
